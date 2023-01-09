@@ -1,0 +1,14 @@
+<launch>
+  
+  
+  <arg default="$(find f1tenth_gym_ros)/maps/track-self_def-full.yaml" name="map" />
+  <node args="$(arg map)" name="map_server" pkg="map_server" type="map_server" />
+
+  
+  <include file="$(find f1tenth_gym_ros)/launch/racecar_model.launch" />
+
+  
+  <rosparam command="load" file="$(find f1tenth_gym_ros)/params.yaml" />
+  <node name="gym_bridge" output="screen" pkg="f1tenth_gym_ros" type="gym_bridge.py" />
+
+</launch>

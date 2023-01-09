@@ -1,0 +1,4 @@
+# Project exclude paths
+/acado_code_generation/build/*
+/external/qpoases/EXAMPLES/*
+/.vscode/*

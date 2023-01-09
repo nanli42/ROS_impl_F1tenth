@@ -1,0 +1,5 @@
+<launch>
+  <rosparam command="load" file="$(find f110_nmpc)/config/param_config.yaml" />
+  <node pkg="f110_perception" type="f110_timer_manager_node" name="timer_manager" output="screen" launch-prefix="sudo -E">
+  </node>
+</launch>

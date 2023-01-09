@@ -1,0 +1,4 @@
+<launch>
+  <node pkg="f110_perception" type="test_WCET_op" name="test_WCET_op" output="screen">
+  </node>
+</launch>

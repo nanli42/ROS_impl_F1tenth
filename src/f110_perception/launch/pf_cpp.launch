@@ -1,0 +1,12 @@
+<launch>
+  <rosparam command="load" file="$(find f110_nmpc)/config/param_config.yaml" />
+  <node pkg="f110_perception" type="f110_pf_cpp_node" name="pf_cpp" output="screen" launch-prefix="sudo -E">
+    <!--
+    <remap from="pf/pose/odom" to="/odom" />
+    <remap from="ego_id/drive" to="drive" />
+    <remap from="filtered_lidar" to="ego_id/scan" />
+    -->
+    <remap from="pf_est_odom" to="PF/pose/odom" />
+    <remap from="filtered_lidar" to="OD/filtered_lidar" />
+  </node>
+</launch>

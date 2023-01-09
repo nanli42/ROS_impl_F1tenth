@@ -1,0 +1,10 @@
+<launch>
+  <rosparam command="load" file="$(find f110_nmpc)/config/param_config.yaml" />
+  <node pkg="f110_perception" type="f110_opp_detect_node" name="opp_detect" output="screen" launch-prefix="sudo -E">
+    <!--
+    <remap from="pf/pose/odom" to="/odom" />
+    <remap from="ego_id/scan" to="/scan" />
+    -->
+    <remap from="pf/pose/odom" to="ego_id/odom" />
+  </node>
+</launch>

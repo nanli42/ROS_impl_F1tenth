@@ -1,0 +1,15 @@
+<launch>
+
+    <rosparam command="load" file="$(find f110_nmpc)/config/param_config.yaml" />
+    <env name="ROSCONSOLE_CONFIG_FILE" value="$(find f110_nmpc)/config/rosconsole_config.conf"/>
+    <param name="who_am_i" type="int" value="1"/>
+
+    <node pkg="f110_nmpc" name="nmpc_ctrl_node_opp" type="nmpc_ctrl_node" output="screen">
+      <remap from="odom_ego" to="opp_id/odom" />
+      <remap from="odom_opp" to="opp_id/opp_odom" />
+      <remap from="NMPC/drive_nmpc" to="opp_drive_nmpc" />
+      <remap from="traj_marker" to="rviz/opp_traj_marker" />
+      <remap from="pos_marker" to="rviz/opp_traj_marker" />
+    </node>
+
+</launch>

@@ -1,0 +1,8 @@
+<launch>
+  <rosparam command="load" file="$(find f110_nmpc)/config/param_config.yaml" />
+  <env name="ROSCONSOLE_CONFIG_FILE" value="$(find f110_nmpc)/config/rosconsole_config.conf"/>
+  <param name="who_am_i" type="int" value="0"/>
+
+  <node pkg="f110_nmpc" type="test_WCET_nmpc" name="test_WCET_nmpc" output="screen">
+  </node>
+</launch>

@@ -1,0 +1,6 @@
+{collision_topic: /collision, ego_drive_topic: /ego_id/drive, ego_odom_topic: /ego_id/odom,
+  ego_opp_odom_topic: /ego_id/opp_odom, ego_scan_topic: /ego_id/scan, executable_dir: /f1tenth_gym/build/,
+  lap_count_topic: /lap_count, lap_time_topic: /lap_time, map_img_ext: .pgm, map_path: /f1tenth_gym/maps/track-self_def-full.yaml,
+  opp_drive_topic: /opp_id/drive, opp_ego_odom_topic: /opp_id/opp_odom, opp_odom_topic: /opp_id/odom,
+  opp_scan_topic: /opp_id/scan, race_info_topic: /race_info, scan_beams: 1080, scan_distance_to_base_link: 0.275,
+  scan_fov: 4.7, waypoints_path: /catkin_ws/src/f1tenth_gym_ros/maps/skirk.csv}

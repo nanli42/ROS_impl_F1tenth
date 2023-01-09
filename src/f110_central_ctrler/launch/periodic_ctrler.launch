@@ -1,0 +1,11 @@
+<launch>
+    <!-- <arg unless="$(arg debug)" name="launch-prefix" value="taskset -c 1"/> -->
+
+    <rosparam command="load" file="$(find f110_central_ctrler)/config/param_config.yaml" />
+    <env name="ROSCONSOLE_CONFIG_FILE" value="$(find f110_central_ctrler)/config/rosconsole_config.conf"/>
+
+    <node pkg="f110_central_ctrler" name="periodic_ctrl_node" type="periodic_ctrl_node" output="screen" >
+      <remap from="ego_drive_nmpc" to="NMPC/drive_nmpc" />
+    </node>
+
+</launch>
